@@ -1,0 +1,14 @@
+{
+  "name": "com.takayoshihagiwara.th-utils-math",
+  "version": "1.0.0",
+  "displayName": "TH-Utils-Math",
+  "description": "This is utilities for math",
+  "unity": "2021.3",
+  "unityRelease": "15f1",
+  "keywords": [
+    "math"
+  ],
+  "author": {
+    "name": "Takayoshi Hagiwara"
+  }
+}
