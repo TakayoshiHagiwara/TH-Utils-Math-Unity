@@ -18,6 +18,11 @@
     - [Returns](#returns-1)
     - [Exapmle](#exapmle-1)
     - [Reference](#reference-1)
+  - [BesselJ(double, double)](#besseljdouble-double)
+    - [Parameters](#parameters-2)
+    - [Returns](#returns-2)
+    - [Exapmle](#exapmle-2)
+    - [Reference](#reference-2)
 </details>
 
 
@@ -25,6 +30,7 @@
 Namespace: TH.Utils
 
 特殊関数に関する静的メソッドを提供します。
+一部の関数は精度に問題があります。そのため、値の妥当性を慎重に検討してください。
 
 # Methods
 <!-- -------------------------------------------------- -->
@@ -116,3 +122,45 @@ double res = MathSpecial.Beta(x, y);
 
 ### Reference
 - https://en.wikipedia.org/wiki/Beta_function
+
+<!-- -------------------------------------------------- -->
+## BesselJ(double, double)
+第1種ベッセル関数を計算します。
+定義は以下です。
+
+$$ z^2 \frac{d^2y}{dz^2} + z \frac{dy}{dz} + (z^2 - v^2)y = 0$$
+
+第1種ベッセル関数は $J_v(z)$ または $J_{-v}(z)$ と表記されます。
+この関数では、以下の式に従って計算を行います。
+
+$$ J_v(z) = \sum_{k=0}^{\infty} \frac{(-1)^k}{k! \Gamma(k + v + 1)} \left( \frac{z}{2} \right)^{2k + v} $$
+
+ただし、この関数では一定の範囲までの展開しかできていません。
+そのため、 $v$ が非整数の場合は精度が著しく低下します。
+
+```csharp
+public static double BesselJ(double v, double z)
+```
+
+### Parameters
+- `v`: double
+  - 次数。
+
+- `x`: double
+  - 定義域。
+
+### Returns
+- double
+  - 第1種ベッセル関数の値。
+
+### Exapmle
+
+```csharp
+using TH.Utils;
+
+double res = MathSpecial.BesselJ(1, 1.12);
+// 0.476663355426007
+```
+
+### Reference
+- https://en.wikipedia.org/wiki/Bessel_function

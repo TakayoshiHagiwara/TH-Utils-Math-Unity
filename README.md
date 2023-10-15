@@ -4,6 +4,9 @@
 Unityにおける数学関連のメソッドを扱います。
 著者が個人的な開発を行っていた際に必要になったちょっとしたメソッドをまとめています。
 
+もともと個人的な使用で開発していたものなので、一部の関数は正確ではなかったり、精度が低かったりする場合があります。
+使用の際は値の妥当性を慎重に検討し、より精度を求める場合は別のライブラリの使用を検討してください。
+
 # Table Of Contents <!-- omit in toc -->
 <details>
 <summary>Details</summary>
@@ -193,12 +196,14 @@ UnityEngine.Mathfを拡張する静的メソッドを提供します。
 - Namespace: TH.Utils
 
 特殊関数に関する静的メソッドを提供します。
+一部の関数は精度に問題があります。そのため、値の妥当性を慎重に検討してください。
 
 ### Methods
 | Name | Summary |
 | ---- | ---- |
 | [Gamma(double)](/Docs~/doc_MathSpecial.md#gammadouble) | ガンマ関数を計算します。 |
 | [Beta(double)](/Docs~/doc_MathSpecial.md#betadouble) | ベータ関数を計算します。 |
+| [BesselJ(double, double)](/Docs~/doc_MathSpecial.md#besseljdouble-double) | 第1種ベッセル関数を計算します。 |
 
 
 

@@ -12,6 +12,8 @@ namespace TH.Utils
 {
     public static class MathSpecial
     {
+        private readonly static int s_besselSeriesN = 10;
+
         /// <summary>
         /// Calculates value of the gamma function using Stirling's approximation.
         /// </summary>
@@ -60,6 +62,31 @@ namespace TH.Utils
         public static double Beta(double x, double y)
         {
             return Gamma(x) * Gamma(y) / Gamma(x + y);
+        }
+
+        /// <summary>
+        /// Calculate value of the Bessel functions of the first kind.
+        /// </summary>
+        /// <param name="v">Order.</param>
+        /// <param name="z">Argument.</param>
+        /// <returns>Value of the Bessel functions of the first kind.</returns>
+        public static double BesselJ(double v, double z)
+        {
+            if (v == 0 && z == 0)
+                return 1;
+
+            double sign = 1;
+            if (v < 0)
+            {
+                sign = Math.Pow(-1, Math.Abs(v));
+                v = Math.Abs(v);
+            }
+
+            double res = 0;
+            for (int k = 0; k < s_besselSeriesN; k++)
+                res += Math.Pow(-1, k) / (MathExtentions.Factorial(k) * Gamma(k + v + 1)) * Math.Pow(z / 2, 2 * k + v);
+
+            return sign * res;
         }
     }
 }
