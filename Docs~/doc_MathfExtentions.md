@@ -19,6 +19,9 @@
     - [Parameters](#parameters-2)
     - [Returns](#returns-2)
     - [Exapmle](#exapmle-1)
+  - [Remap(float, float, float, float, float)](#remapfloat-float-float-float-float)
+    - [Parameters](#parameters-3)
+    - [Returns](#returns-3)
 </details>
 
 
@@ -131,3 +134,27 @@ float z = MathfExtentions.MultiSin(_ampz, _omegaz, Time.realtimeSinceStartup);
 // Move some object.
 // this.position = new Vector3(x, y, z);
 ```
+
+<!-- -------------------------------------------------- -->
+## Remap(float, float, float, float, float)
+任意の範囲の値を別の範囲に変換します。
+
+```csharp
+public static float Remap(float val, float minFrom, float maxFrom, float minTo, float maxTo)
+```
+
+### Parameters
+- `val`: float
+  - 変換対象の値。
+- `minFrom`: float
+  - 変換前の範囲の最小値。
+- `maxFrom`: float
+  - 変換前の範囲の最大値。
+- `minTo`: float
+  - 変換後の範囲の最小値。
+- `maxTo`: float
+  - 変換後の範囲の最大値。
+
+### Returns
+- float
+  - 任意の範囲に変換された値。

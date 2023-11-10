@@ -35,6 +35,9 @@
   - [Factorial(double)](#factorialdouble)
     - [Parameters](#parameters-7)
     - [Returns](#returns-7)
+  - [Remap(double, double, double, double, double)](#remapdouble-double-double-double-double)
+    - [Parameters](#parameters-8)
+    - [Returns](#returns-8)
 </details>
 
 
@@ -276,3 +279,27 @@ public static double Factorial(double n)
 ### Returns
 - double
   - nの階乗
+
+<!-- -------------------------------------------------- -->
+## Remap(double, double, double, double, double)
+任意の範囲の値を別の範囲に変換します。
+
+```csharp
+public static double Remap(double val, double minFrom, double maxFrom, double minTo, double maxTo)
+```
+
+### Parameters
+- `val`: double
+  - 変換対象の値。
+- `minFrom`: double
+  - 変換前の範囲の最小値。
+- `maxFrom`: double
+  - 変換前の範囲の最大値。
+- `minTo`: double
+  - 変換後の範囲の最小値。
+- `maxTo`: double
+  - 変換後の範囲の最大値。
+
+### Returns
+- double
+  - 任意の範囲に変換された値。

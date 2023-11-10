@@ -74,5 +74,19 @@ namespace TH.Utils
 
             return result;
         }
+
+        /// <summary>
+        /// Convert any range the value to another range.
+        /// </summary>
+        /// <param name="val">Value to convert.</param>
+        /// <param name="minFrom">Minimum value of the range of values before conversion.</param>
+        /// <param name="maxFrom">Maximum value of the range of values before conversion.</param>
+        /// <param name="minTo">Minimum of the range of converted values.</param>
+        /// <param name="maxTo">Maximum of the range of converted values.</param>
+        /// <returns>Value converted to an arbitrary range.</returns>
+        public static float Remap(float val, float minFrom, float maxFrom, float minTo, float maxTo)
+        {
+            return (val - minFrom) / (maxFrom - minFrom) * (maxTo - minTo) + minTo;
+        }
     }
 }

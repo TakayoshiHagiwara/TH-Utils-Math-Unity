@@ -171,6 +171,7 @@ System.Mathを拡張する静的メソッドを提供します。
 | [Linspace(double, double, int, bool)](/Docs~/doc_MathExtentions.md#linspacedouble-double-int-bool) | 要素数を指定して等差数列を作成します。 |
 | [MultiSin(double[], double[], double)](/Docs~/doc_MathExtentions.md#multisindouble-double-double) | 複合正弦波形の任意の時刻における値を返します。 |
 | [Factorial(double)](/Docs~/doc_MathExtentions.md#factorialdouble) | 階乗を計算します。 |
+| [Remap(double, double, double, double, double)](/Docs~/doc_MathExtentions.md#remapdouble-double-double-double-double) | 任意の範囲の値を別の範囲に変換します。 |
 
 
 
@@ -187,6 +188,7 @@ UnityEngine.Mathfを拡張する静的メソッドを提供します。
 | [Arange(float, float, int)](/Docs~/doc_MathfExtentions.md#arangefloat-float-int) | 等差数列を返します。 |
 | [Linspace(float, float, int, bool)](/Docs~/doc_MathfExtentions.md#linspacefloat-float-int-bool) | 要素数を指定して等差数列を作成します。 |
 | [MultiSin(float[], float[], float)](/Docs~/doc_MathfExtentions.md#multisinfloat-float-float) | 複合正弦波形の任意の時刻における値を返します。 |
+| [Remap(float, float, float, float, float)](/Docs~/doc_MathfExtentions.md#remapfloat-float-float-float-float) | 任意の範囲の値を別の範囲に変換します。 |
 
 
 
