@@ -38,6 +38,9 @@
   - [Remap(double, double, double, double, double)](#remapdouble-double-double-double-double)
     - [Parameters](#parameters-8)
     - [Returns](#returns-8)
+  - [RisingFactorial(double, int)](#risingfactorialdouble-int)
+    - [Parameters](#parameters-9)
+    - [Returns](#returns-9)
 </details>
 
 
@@ -303,3 +306,24 @@ public static double Remap(double val, double minFrom, double maxFrom, double mi
 ### Returns
 - double
   - 任意の範囲に変換された値。
+
+<!-- -------------------------------------------------- -->
+## RisingFactorial(double, int)
+上昇階乗冪を計算します。
+`x` を底として以下の式であらわされます。
+
+$$ x \times (x+1) \times (x+2) \times \cdots \times (x+n-1) =  \prod_{k=1}^{n} (x+k-1) $$
+
+```csharp
+public static double RisingFactorial(double x, int n)
+```
+
+### Parameters
+- `x`: double
+  - 変数。
+- `n`: int
+  - 冪乗。
+
+### Returns
+- double
+  - 上昇階乗冪。

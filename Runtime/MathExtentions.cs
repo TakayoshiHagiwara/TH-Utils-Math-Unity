@@ -41,9 +41,31 @@ namespace TH.Utils
         /// <returns>Factorial of n.</returns>
         public static int Factorial(int n)
         {
+            if (n < 0)
+                throw new ArgumentException("Arguments should be defined with real value");
+
             if (n == 0)
                 return 1;
             return n * Factorial(n - 1);
+        }
+
+        /// <summary>
+        /// Return the rising factorial (Pochhammer function).
+        /// (x)_n = x * (x+1) * (x+2) * ... * (x+n-1)
+        /// </summary>
+        /// <param name="x">Variable.</param>
+        /// <param name="n">Number to calculate the factorial.</param>
+        /// <returns></returns>
+        public static double RisingFactorial(double x, int n)
+        {
+            if (n == 0)
+                return 1;
+
+            double res = x;
+            for(int i = 1; i < n; i++)
+                res *= x + i;
+
+            return res;
         }
 
         /// <summary>
@@ -55,6 +77,9 @@ namespace TH.Utils
         /// <returns>Double factorial of n.</returns>
         public static int DoubleFactorial(int n)
         {
+            if (n < 0)
+                throw new ArgumentException("Arguments should be defined with real value");
+
             if (n == 0)
                 return 1;
             if (n - 2 < 0)

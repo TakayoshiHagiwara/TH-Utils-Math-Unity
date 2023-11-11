@@ -172,6 +172,7 @@ System.Mathを拡張する静的メソッドを提供します。
 | [MultiSin(double[], double[], double)](/Docs~/doc_MathExtentions.md#multisindouble-double-double) | 複合正弦波形の任意の時刻における値を返します。 |
 | [Factorial(double)](/Docs~/doc_MathExtentions.md#factorialdouble) | 階乗を計算します。 |
 | [Remap(double, double, double, double, double)](/Docs~/doc_MathExtentions.md#remapdouble-double-double-double-double) | 任意の範囲の値を別の範囲に変換します。 |
+| [RisingFactorial(double, int)](/Docs~/doc_MathExtentions.md#risingfactorialdouble-int) | 上昇階乗冪を計算します。 |
 
 
 
