@@ -213,7 +213,9 @@ public static double BesselI(double v, double z)
 超幾何関数の近似値を計算します。
 定義は以下です。
 
-$$ {}_0F_1 (a, z) = \sum_{k=0}^{\infty} \frac{z^k}{(a)_k k!} $$
+<!-- $$ {}_0F_1 (a, z) = \sum_{k=0}^{\infty} \frac{z^k}{(a)_k k!} $$ -->
+
+$$ \sum_{k=0}^{\infty} \frac{z^k}{(a)_k k!} $$
 
 $(a)_k$ は昇冪。
 この関数では近似値を求めるのみなので、値の妥当性に注意してください。
