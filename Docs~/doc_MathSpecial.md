@@ -23,6 +23,22 @@
     - [Returns](#returns-2)
     - [Exapmle](#exapmle-2)
     - [Reference](#reference-2)
+  - [BesselI(double, double)](#besselidouble-double)
+    - [Parameters](#parameters-3)
+    - [Returns](#returns-3)
+    - [Reference](#reference-3)
+  - [Hyp0f1(double, double)](#hyp0f1double-double)
+    - [Parameters](#parameters-4)
+    - [Returns](#returns-4)
+    - [Reference](#reference-4)
+  - [Digamma(double)](#digammadouble)
+    - [Parameters](#parameters-5)
+    - [Returns](#returns-5)
+    - [Reference](#reference-5)
+  - [HarmonicNumber(int)](#harmonicnumberint)
+    - [Parameters](#parameters-6)
+    - [Returns](#returns-6)
+    - [Reference](#reference-6)
 </details>
 
 
@@ -46,7 +62,7 @@ $$ \Gamma(z) = \int_{0}^{\infty} t^{z-1} e^{-t} dt$$
 
 $$ \Gamma(z) \sim \sqrt{\dfrac{2 \pi}{z}} \left( \dfrac{1}{e} \left( z + \dfrac{1}{12z - \dfrac{1}{10z}} \right) \right)^z $$
 
-また、一部の`z`に対しては近似値ではなく、以下の式に従って正しい値を計算します。
+また、一部の`z`に対しては以下の式に従って値を計算します。
 - `z`が自然数の場合
 
 $$ \Gamma(z) = (z-1)! $$
@@ -164,3 +180,104 @@ double res = MathSpecial.BesselJ(1, 1.12);
 
 ### Reference
 - https://en.wikipedia.org/wiki/Bessel_function
+
+<!-- -------------------------------------------------- -->
+## BesselI(double, double)
+変形第1種ベッセル関数を計算します。
+定義は以下です。
+
+$$ I_v(z) = \sum_{k=0}^{\infty} \frac{1}{k! \Gamma(k + v + 1)} \left( \frac{z}{2} \right)^{2k + v} $$
+
+この関数では近似値を求めるのみなので、値の妥当性に注意してください。
+
+```csharp
+public static double BesselI(double v, double z)
+```
+
+### Parameters
+- `v`: double
+  - 次数。
+
+- `x`: double
+  - 定義域。
+
+### Returns
+- double
+  - 変形第1種ベッセル関数の値。
+
+### Reference
+- https://en.wikipedia.org/wiki/Bessel_function
+
+<!-- -------------------------------------------------- -->
+## Hyp0f1(double, double)
+超幾何関数の近似値を計算します。
+定義は以下です。
+
+$$ {}_0F_1 (a, z) = \sum_{k=0}^{\infty} \frac{z^k}{(a)_k k!} $$
+
+$(a)_k$ は昇冪。
+この関数では近似値を求めるのみなので、値の妥当性に注意してください。
+
+```csharp
+public static double Hyp0f1(double a, double z)
+```
+
+### Parameters
+- `a`, `z`: double
+  - 実数のパラメータ。
+
+### Returns
+- double
+  - 超幾何関数の近似値。
+
+### Reference
+- https://en.wikipedia.org/wiki/Hypergeometric_function
+
+<!-- -------------------------------------------------- -->
+## Digamma(double)
+ディガンマ関数の近似値を計算します。
+定義は以下です。
+
+$$ \psi(z) = \frac{\Gamma'(z)}{\Gamma(z)} $$
+
+この関数では以下の式に従って計算します。
+この関数では近似値を求めるのみなので、値の妥当性に注意してください。
+
+$$ \psi(z) = -\gamma + \sum_{n=0}^{\infty} \frac{z-1}{(n+1)(z+n)} $$
+
+```csharp
+public static double Digamma(double z)
+```
+
+### Parameters
+- `z`: double
+  - 実数のパラメータ。
+
+### Returns
+- double
+  - ディガンマ関数の近似値。
+
+### Reference
+- https://en.wikipedia.org/wiki/Digamma_function
+
+<!-- -------------------------------------------------- -->
+## HarmonicNumber(int)
+調和数を計算します。
+定義は以下です。
+
+$$ H_n = \sum_{k=1}^{n} \frac{1}{k} $$
+
+```csharp
+public static double HarmonicNumber(int n)
+```
+
+### Parameters
+- `n`: int
+  - 自然数。
+
+### Returns
+- double
+  - 調和数。
+
+### Reference
+- https://en.wikipedia.org/wiki/Harmonic_number

@@ -207,6 +207,10 @@ UnityEngine.Mathfを拡張する静的メソッドを提供します。
 | [Gamma(double)](/Docs~/doc_MathSpecial.md#gammadouble) | ガンマ関数を計算します。 |
 | [Beta(double)](/Docs~/doc_MathSpecial.md#betadouble) | ベータ関数を計算します。 |
 | [BesselJ(double, double)](/Docs~/doc_MathSpecial.md#besseljdouble-double) | 第1種ベッセル関数を計算します。 |
+| [BesselI(double, double)](/Docs~/doc_MathSpecial.md#besselidouble-double) | 変形第1種ベッセル関数を計算します。 |
+| [Hyp0f1(double, double)](/Docs~/doc_MathSpecial.md#hyp0f1double-double) | 超幾何関数の近似値を計算します。 |
+| [Digamma(double)](/Docs~/doc_MathSpecial.md#digammadouble) | ディガンマ関数の近似値を計算します。 |
+| [HarmonicNumber(int)](/Docs~/doc_MathSpecial.md#harmonicnumberint) | 調和数を計算します。 |
 
 
 
