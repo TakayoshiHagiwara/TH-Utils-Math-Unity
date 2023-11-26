@@ -98,7 +98,7 @@ $$ \sum_{i=0}^{n} A_{i} \sin(\omega_{i} t) $$
 
 
 ```csharp
-public static float MultiSinAngularFreq(float[] amp, float[] omega, float t)
+public static float MultiSin(float[] amp, float[] omega, float t)
 ```
 
 ### Parameters
