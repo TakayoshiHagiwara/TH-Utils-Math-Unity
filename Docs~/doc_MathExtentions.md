@@ -48,7 +48,7 @@
 Namespace: TH.Utils
 
 System.Mathを拡張する静的メソッドを提供します。
-単精度での計算を行う場合は、[TH.Utils.MathfExtentions](/doc_MathfExtentions.md)も参照ください。
+単精度での計算を行う場合は、[TH.Utils.MathfExtentions](/Docs~/doc_MathfExtentions.md)も参照ください。
 
 # Methods
 <!-- -------------------------------------------------- -->
@@ -228,7 +228,7 @@ $$ \sum_{i=0}^{n} A_{i} \sin(\omega_{i} t) $$
 
 
 ```csharp
-public static double MultiSinAngularFreq(double[] amp, double[] omega, double t)
+public static double MultiSin(double[] amp, double[] omega, double t)
 ```
 
 ### Parameters

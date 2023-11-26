@@ -29,7 +29,7 @@
 Namespace: TH.Utils
 
 UnityEngine.Mathfを拡張する静的メソッドを提供します。
-倍精度での計算を行う場合は、[TH.Utils.MathExtentions](/doc_MathExtentions.md)も参照ください。
+倍精度での計算を行う場合は、[TH.Utils.MathExtentions](/Docs~/doc_MathExtentions.md)も参照ください。
 
 # Methods
 <!-- -------------------------------------------------- -->
